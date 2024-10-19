@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Y'all</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+        }
+
+        #content {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #footer {
+            margin-top: 40px;
+            font-size: 16px;
+            text-align: center;
+            color: gray;
+        }
+
+        #translateButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #translateButton:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello Y'all</h1>
+
+    <div id="content">
+        Banyak banget hal yang sudah aku lalui di tahun ini, namun kebanyakan dari hal itu tidak membuatku bangga dan malah membuatku kecewa.
+        Banyak pengalaman yang ku dapat dari hidup ini tapi semua pengalaman itu tidak cukup untuk membuatku terjamin sukses di masa depan.
+        Aku duduk menatap di layar komputer menulis setiap kata dengan ketidakpastian hal yang ingin kusampaikan, entah mengapa aku sudah muak
+        dengan kehidupanku ini, aku diselimuti berbagai hal negatif seperti ketergantungan oleh kesenangan yang bisa kulakukan sekarang atau nanti.
+        Akan kubuka lembaran baru dalam kehidupanku ini, memulai semua dari awal tetapi dengan mimpi-mimpi lama yang belum tercapai.
+    </div>
+
+    <button id="translateButton">Translate</button>
+
+    <div id="footer">
+        ~Fahmen (fahril) {3:41} Saturday, October 19 2024<br>
+        Have a great life😊~
+    </div>
+
+    <script>
+        // Flag untuk melacak teks yang sedang ditampilkan
+        let isIndonesian = true;
+
+        document.getElementById("translateButton").addEventListener("click", function() {
+            var content = document.getElementById("content");
+
+            if (isIndonesian) {
+                // Ubah ke teks bahasa Inggris
+                content.innerHTML = `I have gone through a lot of things this year, but most of them don't make me proud and instead make me disappointed.
+                I have gained a lot of experience from this life, but all of that experience is not enough to guarantee me success in the future.
+                I sat staring at the computer screen writing every word with uncertainty about what I wanted to convey, for some reason I was fed up with my life,
+                I was surrounded by various negative things such as dependence on pleasure that I could do now or later. 
+                I will open a new page in my life, starting all over again but with old dreams that have not been achieved.`;
+                isIndonesian = false; // Ubah flag menjadi false
+            } else {
+                // Ubah kembali ke teks bahasa Indonesia
+                content.innerHTML = `Banyak banget hal yang sudah aku lalui di tahun ini, namun kebanyakan dari hal itu tidak membuatku bangga dan malah membuatku kecewa.
+                Banyak pengalaman yang ku dapat dari hidup ini tapi semua pengalaman itu tidak cukup untuk membuatku terjamin sukses di masa depan.
+                Aku duduk menatap di layar komputer menulis setiap kata dengan ketidakpastian hal yang ingin kusampaikan, entah mengapa aku sudah muak
+                dengan kehidupanku ini, aku diselimuti berbagai hal negatif seperti ketergantungan oleh kesenangan yang bisa kulakukan sekarang atau nanti.
+                Akan kubuka lembaran baru dalam kehidupanku ini, memulai semua dari awal tetapi dengan mimpi-mimpi lama yang belum tercapai.`;
+                isIndonesian = true; // Ubah flag menjadi true
+            }
+        });
+    </script>
+
+</body>
+</html>
